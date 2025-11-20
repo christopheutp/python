@@ -13,7 +13,7 @@
 a = 1
 b = 2
 a = b
-b = 2
+b = a
 
 # Affichage des valeurs finales
 print("Valeur de a:", a)
