@@ -78,3 +78,91 @@ compte.deposer(500)
 compte.deposer(500)
 compte.retirer(300)
 print(f"Solde final : {compte.get_solde()}€")
+
+
+# 3. Héritage : une classe enfant hérite des propriétés et méthodes d'une classe parent
+class Etudiant(Personne):
+    """
+    Classe Etudiant qui hérite de Personne.
+    """
+    
+    def __init__(self, nom, age, filiere):
+        super().__init__(nom, age)  # Appelle le constructeur de Personne
+        self.filiere = filiere  # Nouvel attribut
+
+    # def se_presenter(self):
+    #     return f"{super().se_presenter()} et j'etudie {self.filiere}"
+
+    def se_presenter(self):
+        """Surcharge de la méthode pour inclure la filière."""
+        return f"Je suis {self.nom}, j'ai {self.age} ans et j'étudie {self.filiere}."
+
+# Test de l'héritage
+etudiant1 = Etudiant("Charlie", 22, "Informatique")
+print(etudiant1.se_presenter())
+
+# 4. Polymorphisme : différentes classes peuvent avoir la même méthode mais un comportement différent
+class Chien:
+    def parler(self):
+        return "Wouf Wouf !"
+
+class Chat:
+    def parler(self):
+        return "Miaou !"
+
+# Fonction utilisant le polymorphisme
+animaux = [Chien(), Chat()]
+for animal in animaux:
+    print(animal.parler())
+
+# 5. Méthodes spéciales : __str__, __len__, __eq__, etc.
+class Livre:
+    """
+    Classe représentant un livre.
+    """
+    
+    def __init__(self, titre, auteur, pages):
+        self.titre = titre
+        self.auteur = auteur
+        self.pages = pages
+
+    def __str__(self):
+        """Affichage convivial d'un livre"""
+        return f"{self.titre} de {self.auteur}, {self.pages} pages."
+    
+    def __len__(self):
+        """Retourne le nombre de pages."""
+        return self.pages
+
+livre1 = Livre("1984", "George Orwell", 328)
+print(livre1) 
+print(f"Nombre de pages : {len(livre1)}")
+
+
+# 6. Programme concret : Gestion simple de véhicules
+class Vehicule:
+    """
+    Classe générique pour un véhicule.
+    """
+    
+    def __init__(self, marque, modele, annee):
+        self.marque = marque
+        self.modele = modele
+        self.annee = annee
+    
+    def demarrer(self):
+        return "Le véhicule démarre."
+
+class Voiture(Vehicule):
+    def demarrer(self):
+        return "La voiture démarre en tournant la clé."
+
+class Moto(Vehicule):
+    def demarrer(self):
+        return "La moto démarre en appuyant sur le bouton d'allumage."
+
+voiture1 = Voiture("Toyota", "Corolla", 2020)
+moto1 = Moto("Honda", "CB500F", 2019)
+
+print(voiture1.demarrer())
+print(moto1.demarrer())
