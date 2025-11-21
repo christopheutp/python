@@ -16,6 +16,16 @@ from mon_module import saluer as s
 saluer = "toto"
 print(s("tata"))
 
+import math
+
+print(math.pi)
+
+from random import randint
+print(randint(1,10))
+
+import datetime as dt
+
+print(dt.datetime.now())
 
 
 
