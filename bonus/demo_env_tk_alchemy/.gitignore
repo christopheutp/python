@@ -1,0 +1,59 @@
+# === Environnements Python ===
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pdb
+
+# === Fichiers temporaires / cache ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# === Fichiers d'environnement ===
+.env
+
+# === Bases de données locales (si SQLite utilisé) ===
+*.db
+*.sqlite3
+
+# === Configurations d’IDE ===
+# VSCode
+.vscode/
+# PyCharm / IntelliJ
+.idea/
+# Autres éditeurs
+*.sublime-workspace
+*.sublime-project
+
+# === Dépendances / installations locales ===
+# Installer les dépendances depuis requirements.txt, pas besoin de stocker :
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+
+# === Tests (si un jour tu ajoutes pytest, coverage...) ===
+.coverage
+htmlcov/
+.cache/
+pytest_cache/
+
+# === Fichiers système divers ===
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+desktop.ini
+
+# === Sauvegardes éventuelles ===
+*.orig
+*.rej
