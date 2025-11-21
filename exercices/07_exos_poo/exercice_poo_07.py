@@ -41,3 +41,6 @@
 
 # 4️⃣ Polymorphisme
 # - Ajouter une méthode `afficher_details()` dans chaque classe pour afficher les informations correspondantes.
+
+
+# correction dans dossier exercice7
